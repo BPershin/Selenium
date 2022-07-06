@@ -30,6 +30,7 @@ public class LoginPage extends BaseTests {
         waitUtilElementToBeClickable(submitButton);
         submitButton.click();
 
+
     }
 
 }

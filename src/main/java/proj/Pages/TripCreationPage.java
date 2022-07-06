@@ -1,6 +1,4 @@
 package proj.Pages;
-
-import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -57,7 +55,6 @@ public class TripCreationPage extends BaseTests {
     WebElement selectedCell;
 
 
-    @Step("Открываем выпадашку 'Подразделения'")
     public void clickSubdivisionExpandButton() {
         waitElement(selfLocator);
         subdivisionExpandButton.click();
@@ -65,7 +62,8 @@ public class TripCreationPage extends BaseTests {
 
 
     public void selectSubdivision(String subdivisionName) {
-        subdivisionExpandButton.findElement(By.xpath(".//option[text() ='" + subdivisionName + "']")).click();
+
+        subdivisionExpandButton.findElement(By.xpath("//option[text() ='" + subdivisionName + "']")).click();
         isFieldSetUpCorrectly(selectedSubDiv.getText(), subdivisionName);
     }
 
